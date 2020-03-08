@@ -1,0 +1,129 @@
+/* Layout */
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    'header header'
+    'entry entry'
+    'main main'
+    'footer footer';
+  justify-content: center;
+  width: 100%;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#header {
+  grid-area: header;
+  flex-direction: column-reverse;
+  padding: 1rem 0;
+}
+
+#content {
+  grid-area: main;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.25rem 0;
+  background-color: #eeeeee;
+}
+
+#entry {
+  grid-area: entry;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.25rem 0;
+  background-color: rgb(253, 218, 240);
+}
+
+// Component
+
+.holder {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 90vw;
+  // border: 1px solid #bdbdbd;
+  // border-radius: 5px;
+  // box-shadow: 0 1px 5px #cccccc;
+  // background: white;
+}
+
+.holder {
+  .city,
+  .myDate {
+    margin-bottom: 1rem;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.trip {
+  padding: 0;
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
+}
+
+label {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+input {
+  display: inline-block;
+  padding-left: 0.2rem;
+  height: 50px;
+  width: 220px;
+  // background: #22b2da;
+  color: #333333;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  border: none;
+}
+
+/* Medium Screens */
+@media (min-width: 600px) and (max-width: 900px) {
+  /* Layout */
+
+  /* Components */
+
+  /* holder */
+  .holder {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    width: 70vw;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px #cccccc;
+    background: white;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 901px) {
+  /* Layout */
+  .container {
+    margin: 0 auto;
+    width: 901px;
+  }
+
+  /* Components */
+
+  /* holder */
+  .holder {
+    width: 24rem;
+  }
+}

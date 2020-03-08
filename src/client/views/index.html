@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel App</title>
 </head>
+
 <body>
-  <div>Travel App</div>
+    <div id="app" class="container">
+        <div class="box headline" id="header">
+            Travel App
+        </div>
+        <!--  entry  -->
+        <div class="box" id="entry">
+            <div class="holder trip">
+                <div class="view">
+                    
+                </div>
+                <div class="info">
+                    <div class="location"></div>
+                    <div class="departing"></div>
+                    <div class="countdown"></div>
+                    <div id="weather-info">
+                        <h3>The weather like:</h3>
+                        <p id="temperature"></p>
+                        <p id="weather"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  Content  -->
+        <div class="box" id="content">
+            <div class="holder">
+                <div class="city">
+                    <label for="city">My trip to:</label>
+                    <input type="text" id="city" placeholder="Enter Location">
+                </div>
+                <div class="myDate">
+                    <label for="myDate">Departing: </label>
+                    <input type="text" id="myDate" placeholder="YYYY-MM-DD">
+                </div>
+                <div class="button">
+                    <button id="generate" type="submit"> save trip </button>
+                    <button id="remove-trip" type="submit"> remove trip </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
