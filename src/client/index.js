@@ -1,8 +1,10 @@
-import { performAction } from './js/app';
+import { checkForDate } from './js/dateChecker'
+import { performAction } from './js/app'
+import { countdown } from './js/countdown'
 
-import './styles/resets.scss';
-import './styles/main.scss';
+import './styles/resets.scss'
+import './styles/main.scss'
 
-console.log('client running');
+console.log('client running')
 
-export { performAction };
+export { performAction, checkForDate, countdown }

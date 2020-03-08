@@ -2,7 +2,7 @@
 // const dotenv = require('dotenv')
 // dotenv.config()
 
-const projectData = {}
+let projectData = {}
 
 // dark sky API
 const darkSkyKey = 'eca97d7438678ee6b2ea111e178bbb46'
@@ -80,9 +80,9 @@ app.get('/pixabay', (req, res) => {
 })
 
 // POST route
-app.post('/addData', addData)
+app.post('/addData/location', addLocationData)
 
-function addData(req, res) {
+function addLocationData(req, res) {
   let data = req.body
 
   projectData.lng = data.lng
@@ -92,6 +92,15 @@ function addData(req, res) {
   projectData.myDate = data.myDate
   projectData.timeTag = data.timeTag
 
+  res.send(projectData)
+}
+
+app.post('/removeData', removeData)
+
+function removeData(req, res) {
+  let data = req.body
+
+  projectData = data
   res.send(projectData)
 }
 

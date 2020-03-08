@@ -8,43 +8,53 @@
 </head>
 
 <body>
+    <!-- container -->
     <div id="app" class="container">
+        <!-- header -->
         <div class="box headline" id="header">
             Travel App
         </div>
+
         <!--  entry  -->
         <div class="box" id="entry">
             <div class="holder trip">
+                <!-- pixabay img -->
                 <div class="view">
-                    
+
                 </div>
+                <!-- location, departing and weather info -->
                 <div class="info">
-                    <div class="location"></div>
-                    <div class="departing"></div>
-                    <div class="countdown"></div>
+                    <div id="location"></div>
+                    <div id="departing"></div>
+                    <div id="countdown"></div>
                     <div id="weather-info">
-                        <h3>The weather like:</h3>
+                        <h3 id="show"></h3>
                         <p id="temperature"></p>
                         <p id="weather"></p>
                     </div>
                 </div>
             </div>
+            <!-- error message -->
+            <div id="error-message"></div>
         </div>
 
-        <!--  Content  -->
+        <!--  content  -->
         <div class="box" id="content">
             <div class="holder">
+                <!-- location -->
                 <div class="city">
                     <label for="city">My trip to:</label>
                     <input type="text" id="city" placeholder="Enter Location">
                 </div>
+                <!-- departing -->
                 <div class="myDate">
                     <label for="myDate">Departing: </label>
-                    <input type="text" id="myDate" placeholder="YYYY-MM-DD">
+                    <input type="text" id="myDate" placeholder="MM/DD/YYYY">
                 </div>
+                <!-- buttons -->
                 <div class="button">
                     <button id="generate" type="submit"> save trip </button>
-                    <button id="remove-trip" type="submit"> remove trip </button>
+                    <button id="remove" type="submit"> remove trip </button>
                 </div>
             </div>
         </div>
