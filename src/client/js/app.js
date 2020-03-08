@@ -92,6 +92,7 @@ const updateUI = async () => {
   try {
     const allData = await request.json()
     const view = document.querySelector('.view')
+    if (!allData.cityImg) return
     view.innerHTML = "<img src='" + allData.cityImg + "' >"
     let timeday = Client.countdown(allData.myDate)
     document.getElementById('location').innerHTML =
