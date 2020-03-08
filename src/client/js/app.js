@@ -1,6 +1,10 @@
 const geonamesURL = 'http://api.geonames.org/searchJSON?q='
 const geonamesKey = '&maxRows=10&username=ducdev'
 
+window.onload = function() {
+  updateUI()
+}
+
 document.getElementById('generate').addEventListener('click', performAction)
 document.getElementById('remove').addEventListener('click', removeAction)
 

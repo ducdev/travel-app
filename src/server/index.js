@@ -1,14 +1,16 @@
-// set dotenv for API
-// const dotenv = require('dotenv')
-// dotenv.config()
+//set dotenv for API
+const dotenv = require('dotenv')
+dotenv.config()
+
+console.log(`Your API key is ${process.env.pixabay_KEY}`);
 
 let projectData = {}
 
 // dark sky API
-const darkSkyKey = 'eca97d7438678ee6b2ea111e178bbb46'
+const darkSkyKey = process.env.darkSky_KEY
 
 // pixabay API
-const pixabayKey = '?key=15530200-d3a62bf0e6973b026d6467af5&q='
+const pixabayKey = process.env.pixabay_KEY
 const pixabayType = '&image_type=photo'
 
 
