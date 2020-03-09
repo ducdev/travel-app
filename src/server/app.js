@@ -69,7 +69,7 @@ app.get('/darksky', (req, res) => {
 app.get('/pixabay', (req, res) => {
   request(
     {
-      url: `https://pixabay.com/api/${pixabayKey}${projectData.cityName}${pixabayType}`
+      url: `https://pixabay.com/api/?key=${pixabayKey}&q=${projectData.cityName}${pixabayType}`
     },
     (error, response, body) => {
       if (error || response.statusCode !== 200) {
